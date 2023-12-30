@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+<div id="app">
+    <el-upload
+            action="/api/uploadPdf"
+            :on-preview="handlePreview"
+            accept=".pdf"
+            :limit="10">
+        <el-button size="small" type="primary">点击上传</el-button>
+        <div slot="tip" class="el-upload__tip">只能上传pdf文件，且不超过500kb</div>
+    </el-upload>
+</div>
+
+<!-- import Vue before Element-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.10/dist/vue.js"></script>
+
+<!--import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        methods:{
+            handlePreview(file){
+                window.open(file.response.url);
+            }
+        }
+    })
+</script>
+</body>
+</html>
+</title>
+</head>
+<body>
+
+</body>
+</html>

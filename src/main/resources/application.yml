@@ -1,0 +1,31 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  servlet:
+    multipart:
+      max-file-size: 400MB
+      max-request-size: 400MB
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://139.224.194.55:3306/dairy?serverTimezone=GMT%2b8
+    username: root
+    password: 'Password@123'
+
+mybatis-plus:
+  # 实体类前缀，这样在xml里写resultType就不用加上前缀了
+  type-aliases-package: com.example.audiobook_backend.pojo
+  # 使用这种方式不要求xml文件与Mapper接口文件名一致；也没有指定路径层级一致
+  mapper-locations: classpath:mybatis/*.xml
+server:
+  port: 9090
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+logging:
+  level:
+    com.example.audiobook_backend: debug
