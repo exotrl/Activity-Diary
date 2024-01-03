@@ -93,20 +93,20 @@ public class SignInServiceImpl implements SignInService {
             mail.setHostName("smtp.qq.com");//发送邮件的服务器
             //服务器上要加这行，因为服务器的默认发邮件的25端口被封杀了
             mail.setSmtpPort(587);
-            mail.setAuthentication("807717165@qq.com","vbeblkmgosclbeji");//刚刚记录的授权码，是开启SMTP的密码
-            mail.setFrom("807717165@qq.com","永言（always speaking）");  //发送邮件的邮箱和发件人
+            mail.setAuthentication("3640096544@qq.com","sgsyseyajbqtdacj");//刚刚记录的授权码，是开启SMTP的密码
+            mail.setFrom("3640096544@qq.com","Podasis");  //发送邮件的邮箱和发件人
             //服务器上加这行会报错
             //mail.setSSLOnConnect(true); //使用安全链接
             mail.addTo(email);//接收的邮箱
-            mail.setSubject("永言（always speaking）--用户注册验证User registration verification");//设置邮件的主题
-            mail.setMsg("亲爱的用户：\n    您好！感谢您注册永言（always speaking），" +
+            mail.setSubject("Diary --用户注册验证User registration verification");//设置邮件的主题
+            mail.setMsg("亲爱的用户：\n    您好！感谢您注册 Diary ，" +
                     "请您使用验证码：" +
                     authCode +
                     "进行验证，有效期三分钟。\n    " +
-                    "期待永言（always speaking）能为您带来美好的使用体验！\n" +
-                    "Dear user,\nHello! Thank you for registering for Yong Yan(Always Speaking)." +
+                    "期待 Diary 能为您带来美好的使用体验！\n" +
+                    "Dear user,\nHello! Thank you for registering for Diary." +
                     " Please use the verification code:" + authCode + "  for verification, " +
-                    "which is valid for three minutes.\nLooking forward to Yong Yan(Always Speaking)" +
+                    "which is valid for three minutes.\nLooking forward to Diary" +
                     " bringing you a wonderful user experience!");//设置邮件的内容
             mail.send();//发送
             List<Integer> ids = signMapper.getIdByEmail(email);
