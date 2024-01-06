@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 import javax.websocket.*;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
+import java.util.Date;
 import java.util.List;
 
 
@@ -92,6 +93,7 @@ public class WebSocketService {
         // 将传送过来的JSON格式数据转换成Object
         ObjectMapper objectMapper = new ObjectMapper();
         MessageData messageData = objectMapper.readValue(message, MessageData.class);
+        messageData.setTime(new Date());
 
         // 私聊
         if (messageData.getMsgType() == 1) {
@@ -148,6 +150,7 @@ public class WebSocketService {
     public void sendOnLine(String userId, String sendType) {
         MessageData messageData = new MessageData();
         messageData.setFromUserId("系统消息");
+        messageData.setTime(new Date());
         StringBuffer stringBuffer = new StringBuffer();
         List<String> userIdList = WebSocketMapUtil.getAllKey();
         for (int i = 0; i < userIdList.size(); i++) {
@@ -160,6 +163,7 @@ public class WebSocketService {
             messageData.setMsgData(userId + "退出聊天室, 当前在线用户" + count + "人, 分别是" + stringBuffer.toString());
             logger.info(userId + "退出聊天室");
         }
+        System.out.println(messageData.getTime());
         sendMessageAll(messageData);
     }
 }

@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * @author molimark<br />
- * @date: 2022/11/18 9:40<br/>
+ * @author cly<br />
+ * @date: 2023/12/18 9:40<br/>
  * @description: 解决跨域问题
  */
 @Configuration

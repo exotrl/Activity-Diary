@@ -11,8 +11,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 
 /**
- * @author molimark<br />
- * @date: 2023/1/16 11:25<br/>
+ * @author cly<br />
+ * @date: 2023/12/16 11:25<br/>
  * @description: <br/>
  */
 

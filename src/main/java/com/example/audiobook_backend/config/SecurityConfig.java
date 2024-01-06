@@ -16,8 +16,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 /**
- * @author molimark<br />
- * @date: 2023/1/16 14:15<br/>
+ * @author cly<br />
+ * @date: 2023/12/16 14:15<br/>
  * @description: <br/>
  */
 @Configuration

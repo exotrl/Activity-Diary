@@ -3,8 +3,8 @@ package com.example.audiobook_backend.util;
 import java.util.Date;
 
 /**
- * @author molimark<br />
- * @date: 2023/1/19 23:38<br/>
+ * @author cly<br />
+ * @date: 2023/12/19 23:38<br/>
  * @description: <br/>
  */
 public class VideoTimeUtil {

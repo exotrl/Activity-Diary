@@ -4,8 +4,8 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * @author molimark<br />
- * @date: 2022/8/3 15:01<br/>
+ * @author cly<br />
+ * @date: 2023/12/3 15:01<br/>
  * @description: <br/>
  */
 public class MD5Utils {
